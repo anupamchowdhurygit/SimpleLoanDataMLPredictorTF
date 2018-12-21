@@ -1,6 +1,10 @@
+#importing pandas for the DataFrame relayed functionalities
 import pandas as pd
+#The classifier I have used for this predictor
 from sklearn.tree import DecisionTreeClassifier
+#The library used to split training and validation data from the DataFrame
 from sklearn.model_selection import train_test_split
+#To calculate the Mean Absolute Error between the predicted and actual validation values
 from sklearn.metrics import mean_absolute_error
 
 #Loading the data I dowloaded from Kaggel website
@@ -26,7 +30,7 @@ X = loan_data[feature_columns]
 #Creating train test split of the data
 train_X, test_X, train_y, test_y = train_test_split(X,y, random_state=1)
 
-print(X.head())
+#print(X.head())
 
 #Setting the model
 model = DecisionTreeClassifier()
